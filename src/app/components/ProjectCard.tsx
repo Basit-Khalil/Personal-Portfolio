@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+
 interface ProjectCardProps {
   name: string;
   description: string;
@@ -13,7 +14,10 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, imageUrl, demoUrl, techStack }) => {
   return (
     <div className="project-card">
-      <img src={imageUrl} alt={name} className="project-image" />
+      <Image src={imageUrl} 
+      alt={name} 
+      className="project-image" />
+      
       <div className="project-content">
         <h3>{name}</h3>
         <p>{description}</p>

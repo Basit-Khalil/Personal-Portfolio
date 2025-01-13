@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Skills() {
     const skills = [
-        
         "Digital Marketing",
         "Shopify",
         "Shopify",
@@ -11,7 +10,7 @@ function Skills() {
         "Typescript",
         "React",
         "Nextjs",
-        ];
+    ];
 
     return (
         <div className="div">

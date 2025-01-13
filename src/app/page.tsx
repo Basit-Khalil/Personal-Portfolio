@@ -1,6 +1,7 @@
 'use client'; // Ensure this is at the top for client-side rendering
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import Image component from next/image
 import Name from './components/Name';
 
 function Page() {
@@ -12,7 +13,6 @@ function Page() {
     'Programmer',
     'Social Media Manager',
     'Freelancer',
-
   ];
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function Page() {
     }, 4000); // Change text every 4 seconds
 
     return () => clearInterval(textChangeInterval);
-  }, [textIndex]);
+  }, [textArray.length, textIndex]); // Include textArray.length here
 
   useEffect(() => {
     // Line fill animation when the text changes
@@ -41,31 +41,32 @@ function Page() {
   return (
     <div>
       <div className="profile-container flex flex-col items-center">
-        <img
+      <Image
           src="/profile.jpg"
           alt="Profile Picture"
           className="profile-picture"
+          width={300}  // Provide width for optimization
+          height={300} // Provide height for optimization
         />
         
         <h2 className="hi">Hi</h2>
-        <div className='name-container'>
-        <h2 className="name">I am Basit Khalil</h2>
-        <h2 className="name fade-in">
-          I am {' '}
-          <span className="highlighted-container">
-            <span className="highlighted">{textArray[textIndex]}</span>
-            {/* Line under the active word */}
-            <div
-              className="animated-line"
-              style={{ width: `${lineWidth}%` }}
-            >
-            </div>
-          </span>
-        </h2>
+        <div className="name-container">
+          <h2 className="name">I am Basit Khalil</h2>
+          <h2 className="name fade-in">
+            I am {' '}
+            <span className="highlighted-container">
+              <span className="highlighted">{textArray[textIndex]}</span>
+              {/* Line under the active word */}
+              <div
+                className="animated-line"
+                style={{ width: `${lineWidth}%` }}
+              ></div>
+            </span>
+          </h2>
+        </div>
       </div>
-    </div>
-    <div>
-      <Name />
+      <div>
+        <Name />
       </div>
     </div>
   );

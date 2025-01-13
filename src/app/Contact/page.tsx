@@ -10,7 +10,7 @@ function Page() {
     <div className='contactcontainer'>
     <div>
       <h1 className='contact'>Get In Touch</h1>
-      <p className='work'>Let's Work Together</p>
+      <p className='work'>Let&apos;s Work Together</p>
       <div className='social'>
       <div className="mail">
         

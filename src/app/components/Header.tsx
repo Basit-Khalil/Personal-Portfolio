@@ -48,7 +48,7 @@ function Header() {
         <Link href="/">
           <IoLogoInstagram />
         </Link>
-        <Link href="/">
+        <Link href="`">
           <IoLogoLinkedin />
         </Link>
       </div>
