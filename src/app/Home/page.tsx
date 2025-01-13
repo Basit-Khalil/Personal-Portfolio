@@ -1,7 +1,6 @@
 'use client'; // Ensure this is at the top for client-side rendering
 
 import React, { useState, useEffect } from 'react';
-import Name from './components/Name';
 
 function Page() {
   const [textIndex, setTextIndex] = useState(0);
@@ -64,9 +63,6 @@ function Page() {
         </h2>
       </div>
     </div>
-    <div>
-      <Name />
-      </div>
     </div>
   );
 }
