@@ -24,20 +24,6 @@ const projectsData = [
     demoUrl: 'https://multipagewebsite-one.vercel.app',
     techStack: ['nextjs.svg','typescript.svg','react.svg' ,'tailwindcss.svg','css.svg'],
   },
-  {
-    name: 'Blog by Basit',
-    description: 'A Multipage Website Using Nextjs & React',
-    imageUrl: 'blog.jpg',
-    demoUrl: 'https://multipagewebsite-one.vercel.app',
-    techStack: ['nextjs.svg','typescript.svg','react.svg' ,'tailwindcss.svg','css.svg'],
-  },
-  {
-    name: 'Figma Nikee Website ',
-    description: 'UI/UX  Hackathone Figma Design Website Using Nextjs & React',
-    imageUrl: 'blog.jpg',
-    demoUrl: '',
-    techStack: ['nextjs.svg','typescript.svg','react.svg' ,'tailwindcss.svg','css.svg'],
-  },
 
   
 ];
