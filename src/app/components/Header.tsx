@@ -14,34 +14,35 @@ function Header() {
 
   // Toggle menu visibility
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState); // Toggle state between true and false
+  };
+
+  // Close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
     <header className="header">
       {/* Hamburger Icon (only on small screens) */}
       <div className="hamburger-icon md:hidden flex items-center" onClick={toggleMenu}>
-        {isMenuOpen ? (
-          <IoClose />
-        ) : (
-          <HiMenu />
-        )}
+        {isMenuOpen ? <IoClose /> : <HiMenu />}
       </div>
 
-      {/* Logo (should be next to hamburger on small screens, centered) */}
-      <h1 className="logo">Basit Khalil</h1>
+      {/* Logo */}
+      <h1 className="logo text-center md:text-left">Basit Khalil</h1>
 
       {/* Navigation Links */}
-      <nav className={`nav ${isMenuOpen ? 'open' : ''} md:flex`}>
-        <Link href="/Home">Home</Link>
-        <Link href="/About">About</Link>
-        <Link href="/Projects">Projects</Link>
-        <Link href="/Skills">Skills</Link>
-        <Link href="/Contact">Contact</Link>
+      <nav className={`nav ${isMenuOpen ? 'open' : ''} md:flex md:space-x-6`}>
+        <Link href="/Home" onClick={closeMenu}>Home</Link>
+        <Link href="/About" onClick={closeMenu}>About</Link>
+        <Link href="/Projects" onClick={closeMenu}>Projects</Link>
+        <Link href="/Skills" onClick={closeMenu}>Skills</Link>
+        <Link href="/Contact" onClick={closeMenu}>Contact</Link>
       </nav>
 
       {/* Social Media Icons */}
-      <div className="socialmedia md:flex hidden">
+      <div className="socialmedia md:flex hidden space-x-4">
         <Link href="/">
           <TiSocialFacebook />
         </Link>
@@ -57,3 +58,4 @@ function Header() {
 }
 
 export default Header;
+

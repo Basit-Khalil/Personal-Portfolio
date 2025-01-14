@@ -9,8 +9,8 @@ function Page() {
   const [lineWidth, setLineWidth] = useState(0);
 
   const textArray = [
-    'Marketer',
-    'Programmer',
+    'Web Developer',
+    'Digital Marketer',
     'Social Media Manager',
     'Freelancer',
   ];

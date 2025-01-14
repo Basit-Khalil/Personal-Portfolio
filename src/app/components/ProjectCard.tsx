@@ -1,7 +1,5 @@
-// components/ProjectCard.tsx
 import React from 'react';
 import Image from 'next/image';
-
 
 interface ProjectCardProps {
   name: string;
@@ -14,9 +12,14 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, imageUrl, demoUrl, techStack }) => {
   return (
     <div className="project-card">
-      <Image src={imageUrl} 
-      alt={name} 
-      className="project-image" />
+      
+      <Image
+        src={imageUrl}
+        alt={name}
+        className="project-image"
+        width={300} 
+        height={200} 
+      />
       
       <div className="project-content">
         <h3>{name}</h3>
